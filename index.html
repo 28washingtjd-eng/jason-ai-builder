@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcade Showdown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game" aria-label="Rock paper scissors game">
+      <div class="top-bar">
+        <span class="live-pill">Live match</span>
+        <span class="round-pill">Round <strong id="roundCounter">1</strong></span>
+      </div>
+
+      <h1>Arcade Showdown</h1>
+      <p class="subtitle">Best of luck. The machine is already warming up.</p>
+
+      <div class="scoreboard" aria-live="polite">
+        <div class="score-box player-box">
+          <span class="label">Player</span>
+          <span id="playerScore">0</span>
+        </div>
+        <div class="score-box computer-box">
+          <span class="label">Computer</span>
+          <span id="computerScore">0</span>
+        </div>
+      </div>
+
+      <div class="battle-stage">
+        <div class="fighter player-fighter">
+          <span class="fighter-label">You</span>
+          <span id="playerChoice" class="fighter-choice">Waiting...</span>
+        </div>
+        <div class="versus">VS</div>
+        <div class="fighter computer-fighter">
+          <span class="fighter-label">Computer</span>
+          <span id="computerChoice" class="fighter-choice">Waiting...</span>
+        </div>
+      </div>
+
+      <div class="status" id="status">Choose your move to start the round.</div>
+
+      <div class="choices" aria-label="Choose your hand">
+        <button class="choice-btn" data-choice="rock" aria-label="Choose rock">
+          ✊ Rock
+        </button>
+        <button class="choice-btn" data-choice="paper" aria-label="Choose paper">
+          ✋ Paper
+        </button>
+        <button class="choice-btn" data-choice="scissors" aria-label="Choose scissors">
+          ✌️ Scissors
+        </button>
+      </div>
+
+      <div class="match-summary">
+        <div class="summary-item">
+          <span class="label">Last result</span>
+          <span id="lastResult">No results yet</span>
+        </div>
+      </div>
+
+      <button id="resetBtn" class="reset-btn" type="button">Reset match</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
